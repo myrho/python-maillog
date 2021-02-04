@@ -2,6 +2,10 @@
 
 Easily send log messages via mail.
 
+## Requirements
+
+Python 3.5
+
 ## Install
 
 Download `maillog.py`.
