@@ -38,5 +38,4 @@ def maillog(subject, msg):
     message['To'] = recipients
     part1 = MIMEText(msg, "plain", "utf-8")
     message.attach(part1)
-    print('send msg {}'.format(msg))
     smtp.sendmail(smtp_from, recipients, message.as_string())
