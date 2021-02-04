@@ -30,6 +30,13 @@ def format_exception(e):
 
 
 def maillog(subject, msg):
+    if (not smtp_host or
+        not smtp_port or
+        not smtp_user or
+        not smtp_pass or
+        not smtp_from or
+            not recipients):
+            return
     smtp = SMTP_SSL('%s:%s' % (smtp_host, smtp_port), context=None)
     smtp.login(smtp_user, smtp_pass)
     message = MIMEMultipart("alternative")
